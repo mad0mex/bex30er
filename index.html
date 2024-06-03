@@ -3,66 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geburtstags-Spendenaktion</title>
+    <title>Bex Birthday Funding</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            font-family: Arial, sans-serif;
         }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        .progress-container {
+
+        .background {
+            background-image: url('IMG_1694.jpg');
+            filter: brightness(50%);
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            background-color: #ddd;
-            border-radius: 25px;
-            margin: 20px 0;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
         }
-        .progress {
-            height: 30px;
-            width: 10%; /* Fortschritt hier einstellen */
-            background-color: #4caf50;
-            border-radius: 25px;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            line-height: 30px;
             color: white;
+            padding: 20px;
         }
-        .goal {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+
+        .progress-bar {
+            background: #f2f2f2;
+            border-radius: 25px;
+            padding: 3px;
+            margin: 20px auto;
+            width: 60%;
+            position: relative;
         }
-        .donate-button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .donate-button:hover {
-            background-color: #45a049;
+
+        .progress-bar-inner {
+            background: #ffd1dc;
+            width: 46.67%; /* 700 von 1500 ist ca. 46.67% */
+            height: 20px;
+            border-radius: 25px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Geburtstags-Spendenaktion</h1>
-        <p>Wir sammeln Geld für einen besonderen Geburtstag! Hilf uns, unser Ziel zu erreichen.</p>
-        <div class="goal">Ziel: 1500 Euro</div>
-        <div class="progress-container">
-            <div class="progress">150 Euro</div> <!-- Beispielwert hier einstellen -->
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Bex Birthday Funding</h1>
+        <p>Ziel € 1.500</p>
+        <div class="progress-bar">
+            <div class="progress-bar-inner"></div>
         </div>
-        <a href="#" class="donate-button">Jetzt Spenden</a>
+        <p>€ 700</p>
+        <p>Erzielt mit Hilfe von:<br>Max, Bex, Chrissi, Dieter und Petra, Sam</p>
     </div>
 </body>
 </html>
