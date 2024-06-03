@@ -35,7 +35,7 @@
             background: rgba(121, 115, 115, 0.5); /* Überlagerungsfarbe */
         }
 
-        .content {
+        .content, .info {
             position: relative;
             z-index: 1;
             text-align: center;
@@ -64,7 +64,7 @@
             border-radius: 25px;
             padding: 6px; /* Dickerer Fortschrittsbalken */
             margin: 40px auto; /* Abstand erhöht */
-            width: 60%;
+            width: 80%; /* Breiterer Fortschrittsbalken */
             position: relative;
         }
 
@@ -78,26 +78,26 @@
             text-align: center;
             line-height: 40px; /* Vertikale Zentrierung */
             font-size: 1em; /* Schriftgröße im Balken */
+            white-space: nowrap; /* Verhindert Zeilenumbruch */
         }
     </style>
 </head>
 <body>
-<div class="background"></div>
-<div class="overlay"></div>
-<div class="content">
-    <h1>Bex Birthday Funding</h1>
-    <p class="target">Ziel € 1.500</p>
-    <div class="progress-bar">
-        <div class="progress-bar-inner">Sei die/der Erste</div>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Bex Birthday Funding</h1>
+        <p class="target">Ziel € 1.500</p>
+        <div class="progress-bar">
+            <div class="progress-bar-inner">Sei die/der Erste</div>
+        </div>
+        <p>Erzielt mit Hilfe von:<br>Max, Bex, Chrissi, Dieter und Petra, Sam</p>
     </div>
-   <p>Erzielt mit Hilfe von:<br>Max, Bex, Chrissi, Dieter und Petra, Sam</p>
-</div>
-<div class="info">
-    <h2>Info</h2>
-    <p>Unsere liebe Bex (Becci) wünscht sich seit Jahren einen Whirlpool oder Hot-Tub. Wir möchten sie überraschen und würden uns über eure Unterstützung freuen 😄.</p>
-    <p>Jeder Beitrag hilft, auch wenn wir nur einen Teil der Kosten zusammenbekommen. Es wäre eine tolle Starthilfe 🚀.</p>
-    <p>Wenn du mithelfen möchtest, freuen wir uns über deine Überweisung auf: AT11 2011 1840 8710 9900</p>
-</div>
-
+    <div class="info">
+        <h2>Info</h2>
+        <p>Unsere liebe Bex (Becci) wünscht sich seit Jahren einen Whirlpool oder Hot-Tub. Wir möchten sie überraschen und würden uns über eure Unterstützung freuen 😄.</p>
+        <p>Jeder Beitrag hilft, auch wenn wir nur einen Teil der Kosten zusammenbekommen. Es wäre eine tolle Starthilfe 🚀.</p>
+        <p>Wenn du mithelfen möchtest, freuen wir uns über deine Überweisung auf: AT11 2011 1840 8710 9900</p>
+    </div>
 </body>
 </html>
