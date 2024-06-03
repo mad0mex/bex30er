@@ -22,7 +22,7 @@
             width: 100%;
             height: 100%;
             background-size: cover;
-            background-position: center;
+            background-position: center 50%;
             z-index: -1;
         }
 
@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(121, 115, 115, 0.5); /* Überlagerungsfarbe */
+            background: rgba(121, 115, 115, 0.5);
         }
 
         .content, .info {
@@ -41,44 +41,57 @@
             text-align: center;
             color: white;
             padding: 20px;
-            font-size: 1.5em; /* Schriftgröße um 50% vergrößert */
+            font-size: 1.5em;
         }
 
         h1 {
-            font-size: 2.625em; /* 75% größer als 1.5em */
+            font-size: 2.625em;
             font-weight: bold;
-            margin-bottom: 40px; /* Abstand erhöht */
+            margin-bottom: 40px;
         }
 
         p {
-            margin-bottom: 40px; /* Abstand erhöht */
+            margin-bottom: 40px;
         }
 
         .target {
-            font-size: 1.5em; /* Standard-Schriftgröße */
+            font-size: 1.5em;
             font-weight: normal;
         }
 
         .progress-bar {
             background: #f2f2f2;
             border-radius: 25px;
-            padding: 6px; /* Dickerer Fortschrittsbalken */
-            margin: 40px auto; /* Abstand erhöht */
-            width: 80%; /* Breiterer Fortschrittsbalken */
+            padding: 6px;
+            margin: 40px auto;
+            width: 80%;
             position: relative;
         }
 
         .progress-bar-inner {
-            background: #DA8FAB; /* Neue Farbe */
-            width: 100%; /* 700 von 1500 ist ca. 46.67% */
-            height: 40px; /* Dickerer Fortschrittsbalken */
+            background: #DA8FAB;
+            width: 46.67%;
+            height: 40px;
             border-radius: 25px;
             position: relative;
             color: black;
             text-align: center;
-            line-height: 40px; /* Vertikale Zentrierung */
-            font-size: 1em; /* Schriftgröße im Balken */
-            white-space: nowrap; /* Verhindert Zeilenumbruch */
+            line-height: 40px;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .background {
+                background-position: center 75%;
+            }
+            .content, .info {
+                padding: 10px;
+                font-size: 1.2em;
+            }
+            h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
