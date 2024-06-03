@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bex Birthday Funding</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;700&display=swap');
+
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Kulim Park', sans-serif;
         }
 
         .background {
@@ -30,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(192, 192, 192, 0.5); /* Hellgraue Überlagerung */
+            background: rgba(121, 115, 115, 0.5); /* Überlagerungsfarbe */
         }
 
         .content {
@@ -39,12 +41,13 @@
             text-align: center;
             color: white;
             padding: 20px;
+            font-size: 1.5em; /* Schriftgröße um 50% vergrößert */
         }
 
         .progress-bar {
             background: #f2f2f2;
             border-radius: 25px;
-            padding: 3px;
+            padding: 6px; /* Dickerer Fortschrittsbalken */
             margin: 20px auto;
             width: 60%;
             position: relative;
@@ -53,12 +56,13 @@
         .progress-bar-inner {
             background: #ffd1dc;
             width: 46.67%; /* 700 von 1500 ist ca. 46.67% */
-            height: 20px;
+            height: 40px; /* Dickerer Fortschrittsbalken */
             border-radius: 25px;
             position: relative;
             color: black;
             text-align: center;
-            line-height: 20px; /* Vertikale Zentrierung */
+            line-height: 40px; /* Vertikale Zentrierung */
+            font-size: 1em; /* Schriftgröße im Balken */
         }
     </style>
 </head>
