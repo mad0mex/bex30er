@@ -44,17 +44,30 @@
             font-size: 1.5em; /* Schriftgröße um 50% vergrößert */
         }
 
+        h1 {
+            margin-bottom: 40px; /* Abstand erhöht */
+        }
+
+        p {
+            margin-bottom: 40px; /* Abstand erhöht */
+        }
+
+        .target {
+            font-size: 2.625em; /* 75% größer als 1.5em */
+            font-weight: bold;
+        }
+
         .progress-bar {
             background: #f2f2f2;
             border-radius: 25px;
             padding: 6px; /* Dickerer Fortschrittsbalken */
-            margin: 20px auto;
+            margin: 40px auto; /* Abstand erhöht */
             width: 60%;
             position: relative;
         }
 
         .progress-bar-inner {
-            background: #ffd1dc;
+            background: #DA8FAB; /* Neue Farbe */
             width: 46.67%; /* 700 von 1500 ist ca. 46.67% */
             height: 40px; /* Dickerer Fortschrittsbalken */
             border-radius: 25px;
@@ -71,7 +84,7 @@
     <div class="overlay"></div>
     <div class="content">
         <h1>Bex Birthday Funding</h1>
-        <p>Ziel € 1.500</p>
+        <p class="target">Ziel € 1.500</p>
         <div class="progress-bar">
             <div class="progress-bar-inner">€ 700</div>
         </div>
