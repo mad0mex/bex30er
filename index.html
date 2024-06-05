@@ -196,7 +196,7 @@
         // Berechne den Fortschrittswert
         const achieved = 50;
         const target = 1500;
-        const progressWidth = (achieved / target) * 100 + "%";
+        const progressWidth = Math.round( (achieved / target) * 100) + "%";
 
         // Setze den Fortschrittswert als CSS-Variable
         document.documentElement.style.setProperty(
