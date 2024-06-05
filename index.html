@@ -215,6 +215,10 @@
           .split(", ")
           .map((item) => item.replace(/"/g, ""));
         document.getElementById("donor-list").innerText = donorList.join(", ");
+
+        // Update achieved and target text
+        const targetElement = document.querySelector(".target");
+        targetElement.innerText = `€${achieved} erreicht von: €${target}`;
       });
 
       function copyIBAN() {
