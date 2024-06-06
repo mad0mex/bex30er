@@ -1,228 +1,229 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bex Birthday Funding</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;700&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bex Birthday Funding</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;700&display=swap");
 
-      :root {
-        --progress-width: 0%;
-        --donor-list: "Karina, Kathi";
-      }
+    :root {
+      --progress-width: 0%;
+      --donor-list: "Karina, Kathi";
+    }
 
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        font-family: "Kulim Park", sans-serif;
-        overflow: hidden;
-      }
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: "Kulim Park", sans-serif;
+      overflow: hidden;
+    }
 
+    .background {
+      background-image: url("IMG_1694.jpg");
+      filter: brightness(50%);
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center 50%;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background: rgba(121, 115, 115, 0.25);
+      z-index: 0;
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(121, 115, 115, 0) 50%,
+        rgba(121, 115, 115, 0.5) 100%
+      );
+      z-index: 1;
+    }
+
+    .content,
+    .info {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      font-size: 1.5em;
+      margin-bottom: -60px;
+    }
+
+    .info {
+      color: white;
+    }
+
+    h1 {
+      font-size: 2.625em;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: -10px;
+    }
+
+    p {
+      font-size: 0.8em;
+      margin-bottom: 0px;
+    }
+
+    .target {
+      font-size: 1.5em;
+      font-weight: normal;
+    }
+
+    .progress-bar {
+      background: #f2f2f2;
+      border-radius: 25px;
+      padding: 6px;
+      margin: 40px auto;
+      width: 80%;
+      position: relative;
+    }
+
+    .progress-bar-inner {
+      background: #da8fab;
+      width: var(--progress-width); /* Variable für die Breite */
+      height: 40px;
+      border-radius: 25px;
+      position: relative;
+      color: black;
+      text-align: center;
+      line-height: 40px;
+      font-size: 1em;
+      white-space: nowrap;
+    }
+
+    .custom-block {
+      background: none;
+      padding: 20px;
+      margin: 20px 0;
+      max-width: 64rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .copy-button {
+      border: 2px solid white;
+      background-color: rgba(121, 115, 115, 1);
+      color: white;
+      font-weight: bold;
+      padding: 8px 16px;
+      font-size: 0.8em;
+      cursor: pointer;
+      margin-top: 10px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .copy-button:hover {
+      background-color: #da8fab;
+    }
+
+    .main {
+      height: 100%;
+      overflow-y: scroll;
+    }
+
+    @media only screen and (max-width: 600px) {
       .background {
-        background-image: url("IMG_1694.jpg");
-        filter: brightness(50%);
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center 50%;
-        z-index: -1;
+        background-position: center 100%;
       }
-
-      .overlay {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background: rgba(121, 115, 115, 0.25);
-        z-index: 0;
-      }
-
-      .gradient-overlay {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(121, 115, 115, 0) 50%,
-          rgba(121, 115, 115, 0.5) 100%
-        );
-        z-index: 1;
-      }
-
       .content,
       .info {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        color: white;
-        padding: 20px;
-        font-size: 1.5em;
-        margin-bottom: -60px;
+        padding: 10px;
+        font-size: 1.2em;
+        margin-bottom: -20px;
       }
-
-      .info {
-        color: white;
-      }
-
       h1 {
-        font-size: 2.625em;
-        font-weight: bold;
-        margin-bottom: 40px;
-      }
-
-      h2 {
         font-size: 1.8em;
-        font-weight: bold;
-        margin-bottom: -10px;
-      }
-
-      p {
-        font-size: 0.8em;
         margin-bottom: 0px;
       }
-
-      .target {
+      h2 {
         font-size: 1.5em;
-        font-weight: normal;
+        margin-top: -20px;
+        margin-bottom: -5px;
       }
-
+      p {
+        font-size: 0.7em;
+        margin-bottom: 0px;
+      }
       .progress-bar {
-        background: #f2f2f2;
-        border-radius: 25px;
-        padding: 6px;
-        margin: 40px auto;
-        width: 80%;
-        position: relative;
+        width: 90%;
+        margin: 20px auto;
+        padding: 4px;
       }
-
       .progress-bar-inner {
-        background: #da8fab;
-        width: var(--progress-width); /* Variable für die Breite */
-        height: 40px;
-        border-radius: 25px;
-        position: relative;
-        color: black;
-        text-align: center;
-        line-height: 40px;
-        font-size: 1em;
-        white-space: nowrap;
+        height: 30px;
+        line-height: 30px;
+        font-size: 0.9em;
       }
-
-      .custom-block {
-        background: none;
-        padding: 20px;
-        margin: 20px 0;
-        max-width: 64rem;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
       .copy-button {
-        border: 2px solid white;
-        background-color: rgba(121, 115, 115, 1);
-        color: white;
-        font-weight: bold;
-        padding: 8px 16px;
-        font-size: 0.8em;
-        cursor: pointer;
-        margin-top: 10px;
-        display: inline-block;
-        transition: background-color 0.3s;
+        padding: 6px 12px;
+        font-size: 0.7em;
+        margin-top: 0px;
       }
-
-      .copy-button:hover {
-        background-color: #da8fab;
+      .custom-block {
+        padding: 40px 10px;
+        margin: 10px 0;
       }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Berechne den Fortschrittswert
+      const achieved = 50 + 40;
+      const target = 1500;
+      const progressWidth = Math.round((achieved / target) * 100) + "%";
 
-      .main {
-        height: 100%;
-        overflow-y: scroll;
-      }
+      // Setze den Fortschrittswert als CSS-Variable
+      document.documentElement.style.setProperty(
+        "--progress-width",
+        progressWidth
+      );
 
-      @media only screen and (max-width: 600px) {
-        .background {
-          background-position: center 100%;
-        }
-        .content,
-        .info {
-          padding: 10px;
-          font-size: 1.2em;
-          margin-bottom: -20px;
-        }
-        h1 {
-          font-size: 1.8em;
-          margin-bottom: 0px;
-        }
-        h2 {
-          font-size: 1.5em;
-          margin-top: -20px;
-          margin-bottom: -5px;
-        }
-        p {
-          font-size: 0.7em;
-          margin-bottom: 0px;
-        }
-        .progress-bar {
-          width: 90%;
-          margin: 20px auto;
-          padding: 4px;
-        }
-        .progress-bar-inner {
-          height: 30px;
-          line-height: 30px;
-          font-size: 0.9em;
-        }
-        .copy-button {
-          padding: 6px 12px;
-          font-size: 0.7em;
-          margin-top: 0px;
-        }
-        .custom-block {
-          padding: 40px 10px;
-          margin: 10px 0;
-        }
-      }
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Berechne den Fortschrittswert
-        const achieved = 50+40;
-        const target = 1500;
-        const progressWidth = Math.round( (achieved / target) * 100) + "%";
+      // Update progress bar width text
+      const progressBar = document.getElementById("progress-bar-inner");
+      progressBar.style.width = progressWidth;
+      progressBar.innerText = progressWidth;
 
-        // Setze den Fortschrittswert als CSS-Variable
-        document.documentElement.style.setProperty(
-          "--progress-width",
-          progressWidth
-        );
+      // Update donor list
+      const donorList = getComputedStyle(document.documentElement)
+        .getPropertyValue("--donor-list")
+        .split(", ")
+        .map((item) => item.replace(/"/g, ""));
+      document.getElementById("donor-list").innerText = donorList.join(", ");
 
-        // Update progress bar width text
-        const progressBar = document.getElementById("progress-bar-inner");
-        progressBar.style.width = progressWidth;
-        progressBar.innerText = progressWidth;
+      // Update achieved and target text
+      const targetElement = document.querySelector(".target");
+      targetElement.innerText = `€${achieved} von €${target} erreicht`;
+    });
 
-        // Update donor list
-        const donorList = getComputedStyle(document.documentElement)
-          .getPropertyValue("--donor-list")
-          .split(", ")
-          .map((item) => item.replace(/"/g, ""));
-        document.getElementById("donor-list").innerText = donorList.join(", ");
-
-        // Update achieved and target text
-        const targetElement = document.querySelector(".target");
-        targetElement.innerText = `€${achieved} von €${target} erreicht`;
-      });
-
-      function copyIBAN() {
-        const iban = "AT11 2011 1840 8710 9900";
+    function copyIBAN() {
+      const iban = "AT11 2011 1840 8710 9900";
+      if (navigator.clipboard) {
         navigator.clipboard.writeText(iban).then(
           () => {
             alert("IBAN kopiert: " + iban);
@@ -231,46 +232,60 @@
             alert("Fehler beim Kopieren der IBAN.");
           }
         );
+      } else {
+        // Fallback für unsichere Kontexte
+        const textarea = document.createElement("textarea");
+        textarea.value = iban;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand("copy");
+          alert("IBAN kopiert: " + iban);
+        } catch (err) {
+          alert("Fehler beim Kopieren der IBAN.");
+        }
+        document.body.removeChild(textarea);
       }
-    </script>
-  </head>
-  <body>
-    <div class="background"></div>
-    <div class="overlay"></div>
-    <div class="gradient-overlay"></div>
+    }
+  </script>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <div class="gradient-overlay"></div>
 
-    <div class="main">
-      <div class="content">
-        <h1>Bex Birthday Funding</h1>
-        <p class="target">Ziel € 1.500</p>
-        <div class="progress-bar">
-          <div class="progress-bar-inner" id="progress-bar-inner"></div>
-        </div>
-        <p>Erzielt mit Hilfe von:<br /><span id="donor-list"></span></p>
+  <div class="main">
+    <div class="content">
+      <h1>Bex Birthday Funding</h1>
+      <p class="target">Ziel € 1.500</p>
+      <div class="progress-bar">
+        <div class="progress-bar-inner" id="progress-bar-inner"></div>
       </div>
-      <div class="custom-block">
-        <div class="info">
-          <h2>Info</h2>
-          <p>
-            Unsere liebe Bex oder auch Becci genannt 😉 wünscht sich seit Jahren
-            schon ein Whirlpool oder ein Hot-Tub. Daher würde ich euch gerne
-            dazu motivieren einen Beitrag dazu zu leisten 😄. Es ist mit ihr
-            grundsätzlich mal besprochen worden; sie würde sich echt darüber
-            freuen 🥰. Mir/uns ist natürlich bewusst, dass wir klarerweise nur
-            einen Teil zusammenbekommen, wäre aber schon eine super Starthilfe
-            🚀
-          </p>
-          <p>
-            Wenn ihr mithelfen möchtet, freue ich mich über eure Überweisung auf: AT11 2011 1840 8710 9900
-          </p>
-          <p>
-            Das gesammelte Geld von allen, werden wir dann gemeinsam auf der Feier überreichen 😊
-          </p>
-        </div>
-      </div>
-      <div class="content">
-        <button class="copy-button" onclick="copyIBAN()">IBAN kopieren</button>
+      <p>Erzielt mit Hilfe von:<br /><span id="donor-list"></span></p>
+    </div>
+    <div class="custom-block">
+      <div class="info">
+        <h2>Info</h2>
+        <p>
+          Unsere liebe Bex oder auch Becci genannt 😉 wünscht sich seit Jahren
+          schon ein Whirlpool oder ein Hot-Tub. Daher würde ich euch gerne
+          dazu motivieren einen Beitrag dazu zu leisten 😄. Es ist mit ihr
+          grundsätzlich mal besprochen worden; sie würde sich echt darüber
+          freuen 🥰. Mir/uns ist natürlich bewusst, dass wir klarerweise nur
+          einen Teil zusammenbekommen, wäre aber schon eine super Starthilfe
+          🚀
+        </p>
+        <p>
+          Wenn ihr mithelfen möchtet, freue ich mich über eure Überweisung auf: AT11 2011 1840 8710 9900
+        </p>
+        <p>
+          Das gesammelte Geld von allen, werden wir dann gemeinsam auf der Feier überreichen 😊
+        </p>
       </div>
     </div>
-  </body>
+    <div class="content">
+      <button class="copy-button" onclick="copyIBAN()">IBAN kopieren</button>
+    </div>
+  </div>
+</body>
 </html>
