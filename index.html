@@ -105,7 +105,7 @@
 
     .progress-bar-inner {
       background: #da8fab;
-      width: 100% /* var(--progress-width);  Variable für die Breite */
+      width: var(--progress-width);
       height: 40px;
       border-radius: 25px;
       position: relative;
@@ -172,9 +172,10 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Berechne den Fortschrittswert
-      const achieved = 1400+100+50+70;
+      const achieved = 1400 + 100 + 50 + 70;
       const target = 1500;
-      const progressWidth = Math.round((achieved / target) * 100) + "%";
+      const progressPercentage = Math.round((achieved / target) * 100);
+      const progressWidth = Math.min(progressPercentage, 100) + "%"; // Begrenze die Breite auf 100%
 
       // Setze den Fortschrittswert als CSS-Variable
       document.documentElement.style.setProperty(
@@ -184,8 +185,7 @@
 
       // Update progress bar width text
       const progressBar = document.getElementById("progress-bar-inner");
-      progressBar.style.width = progressWidth;
-      progressBar.innerText = progressWidth;
+      progressBar.innerText = `${progressPercentage}%`;
 
       // Update donor list
       const donorList = getComputedStyle(document.documentElement)
