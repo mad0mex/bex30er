@@ -9,7 +9,7 @@
 
     :root {
       --progress-width: 0%;
-      --donor-list: "Karina", "Kathi", "Nina & Marco", "Chrissi", "Petra & Dieter", "Celi & Rafi", "Savin", "Nadja & Manuel", "Ronni & Viki", "Pamela", "Harald & Beate", "Marita & Flo", "Lisa & Pia", "Romana", "Anna", "Niki", "Meli, Philipp & Laura", "Steffi & Daniel";
+      --donor-list: "Karina", "Kathi", "Nina & Marco", "Chrissi", "Petra & Dieter", "Celi & Rafi", "Savin", "Nadja & Manuel", "Ronni & Viki", "Pamela", "Harald & Beate", "Marita & Flo", "Lisa & Pia", "Romana", "Anna", "Niki", "Meli, Philipp & Laura", "Steffi & Daniel", "Viki", "Cristl", "Sarah & Alex";
     }
 
     body,
@@ -105,7 +105,7 @@
 
     .progress-bar-inner {
       background: #da8fab;
-      width: var(--progress-width); /* Variable für die Breite */
+      width: 100% /* var(--progress-width);  Variable für die Breite */
       height: 40px;
       border-radius: 25px;
       position: relative;
@@ -172,7 +172,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Berechne den Fortschrittswert
-      const achieved = 1400;
+      const achieved = 1400+100+50+70;
       const target = 1500;
       const progressWidth = Math.round((achieved / target) * 100) + "%";
 
