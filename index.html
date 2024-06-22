@@ -9,7 +9,7 @@
 
     :root {
       --progress-width: 0%;
-      --donor-list: "Karina", "Kathi", "Nina & Marco", "Chrissi", "Petra & Dieter", "Celi & Rafi", "Savin", "Nadja & Manuel", "Ronni & Viki", "Pamela", "Harald & Beate", "Marita & Flo", "Lisa & Pia", "Romana", "Anna", "Niki", "Meli, Philipp & Laura", "Steffi & Daniel", "Viki", "Cristl", "Sarah & Alex";
+      --donor-list: "Karina", "Kathi", "Nina & Marco", "Chrissi", "Petra & Dieter", "Celi & Rafi", "Savin", "Nadja & Manuel", "Ronni & Viki", "Pamela", "Harald & Beate", "Marita & Flo", "Lisa & Pia", "Romana", "Anna", "Niki", "Meli, Philipp & Laura", "Steffi & Daniel", "Viki", "Cristl", "Sarah & Alex", "Steffi";
     }
 
     body,
@@ -172,7 +172,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Berechne den Fortschrittswert
-      const achieved = 1400 + 100 + 50 + 70;
+      const achieved = 1400 + 100 + 50 + 70 + 30;
       const target = 1500;
       const progressPercentage = Math.round((achieved / target) * 100);
       const progressWidth = Math.min(progressPercentage, 100) + "%"; // Begrenze die Breite auf 100%
